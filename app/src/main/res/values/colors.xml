@@ -1,0 +1,8 @@
+<resources>
+    <color name="cyan_stark">#00E5FF</color>
+    <color name="cyan_dark">#0891B2</color>
+    <color name="obsidian_black">#020617</color>
+    <color name="slate_dark">#0F172A</color>
+    <color name="amber_warning">#F59E0B</color>
+    <color name="emerald_active">#10B981</color>
+</resources>
