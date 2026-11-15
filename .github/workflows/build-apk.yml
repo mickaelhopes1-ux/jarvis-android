@@ -1,0 +1,46 @@
+name: Compiler l'APK Android J.A.R.V.I.S. (Cloud)
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch: # Déclenchement manuel en 1 clic depuis GitHub Mobile
+
+jobs:
+  build:
+    name: Compilation APK Jetpack Compose
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupération du code source
+        uses: actions/checkout@v4
+
+      - name: Configuration de Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Donner les permissions d'exécution à Gradle
+        run: |
+          if [ -f "gradlew" ]; then
+            chmod +x gradlew
+          elif [ -f "android/gradlew" ]; then
+            chmod +x android/gradlew
+          fi
+
+      - name: Compiler l'APK Android Debug
+        run: |
+          if [ -f "gradlew" ]; then
+            ./gradlew assembleDebug --stacktrace
+          elif [ -f "android/gradlew" ]; then
+            cd android && ./gradlew assembleDebug --stacktrace
+          fi
+
+      - name: Rechercher et mettre à disposition l'APK généré
+        uses: actions/upload-artifact@v4
+        with:
+          name: jarvis-oppo-a74s-debug-apk
+          path: |
+            **/app/build/outputs/apk/debug/*.apk
+          retention-days: 14

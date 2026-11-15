@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">J.A.R.V.I.S.</string>
+    <string name="assistant_title">J.A.R.V.I.S. Mobile Agent</string>
+    <string name="stark_tagline">Stark Tactical Operating System</string>
+    <string name="accessibility_service_description">Permet à J.A.R.V.I.S. de lire les éléments affichés à l\'écran et de piloter vos applications par la voix, tout en bloquant l\'accès aux applications bancaires et gestionnaires de mots de passe.</string>
+</resources>
