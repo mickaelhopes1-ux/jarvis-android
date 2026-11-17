@@ -131,8 +131,8 @@ Coordonnées x,y,x1,y1,x2,y2 normalisées 0..1000 (0=gauche/haut, 1000=droite/ba
 Vérifie d'abord si BUT est déjà atteint à l'écran : si oui, réponds aussitôt action="done".
 Mets sensitive=true si envoyer/payer/supprimer/installer/sécurité. Format écran: texte|C(cliquable)E(éditable)."""
 
-        private const val CONNECT_TIMEOUT_MS = 10000
-        private const val READ_TIMEOUT_MS = 15000
+        private const val CONNECT_TIMEOUT_MS = 15000
+private const val READ_TIMEOUT_MS = 60000
     }
 
     suspend fun generateReply(
