@@ -114,7 +114,7 @@ class GeminiClient {
 
     companion object {
         private const val TAG = "GeminiClient"
-        private const val PRIMARY_MODEL = "gemini-3-flash-preview" // ou "gemini-2.5-flash" sur v1
+        private const val PRIMARY_MODEL = "gemini-3.5-flash"
 private const val FALLBACK_MODEL = "gemini-3.1-flash-lite-preview" // ou "gemini-2.5-flash-lite" sur v1
 private const val LIGHTWEIGHT_MODEL = "gemini-3.1-flash-lite-preview"
 private const val BASE_URL = "https://generativelanguage.googleapis.com/v1/models"
